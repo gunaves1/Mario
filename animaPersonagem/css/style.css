@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    height: 100dvh;
+}
+.personagem{
+    width: 300px;
+    height: 370px;
+    background-image: url('../img/frame1.png');
+    background-size: 100% 100%;
+    
+    transition: all 5s;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+}
+@keyframes personagem{
+    0%{
+        background-image: url('../img/frame1.png');
+    }
+    20%{
+        background-image: url('../img/frame2.png');
+    }
+    40%{
+        background-image: url('../img/frame3.png');
+    }
+    60%{
+        background-image: url('../img/frame4.png');
+    }
+    80%{
+        background-image: url('../img/frame5.png');
+    }
+    100%{
+        background-image: url('../img/frame6.png');
+    }
+}
+.container:hover .personagem{
+    animation: personagem 1s linear infinite;
+}

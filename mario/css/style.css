@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Fundo{
+    background-image: url('../img/fundo.png');
+    background-size: 100% 100%;
+    height: 100dvh;
+}
+.transp{
+    display: flex;
+    height: 85dvh;
+    width: 150dvh;
+    align-items: end;
+}
+.personagem{
+    width: 75px;
+    height: 100px;
+    background-image: url('../img/Camada1.png');
+    background-size: 100% 100%;
+}
+.transp:hover .personagem{
+    animation: personagem 1s linear infinite, andar 3.5s linear;
+}
+@keyframes personagem {
+    20%{
+        background-image: url('../img/Camada2.png');
+    }
+    40%{
+        background-image: url('../img/Camada3.png');
+    }
+    60%{
+        background-image: url('../img/Camada1.png');
+    }
+    80%{
+        background-image: url('../img/Camada2.png');
+    }
+    100%{
+        background-image: url('../img/Camada4.png');
+    }
+
+}
+@keyframes andar {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1000px);
+    }
+}
